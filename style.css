@@ -97,8 +97,8 @@ body {
 .sidebar-element {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 10px;
+    gap: 1ch;
+    padding-bottom: 1lh;
 }
 
 .sidebar-element > svg {
