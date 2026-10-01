@@ -56,14 +56,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom properties */
 :root {
-    --background-color: #00abfe;
+    --custom-blue: #1992d4;
+    --sidebar-font-color: white;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: 200px 1fr;
     grid-template-areas:
     "sidebar header"
@@ -71,21 +72,37 @@ body {
 }
 
 .sidebar {
-    background-color: var(--background-color); 
+    background-color: var(--custom-blue); 
+    color: var(--sidebar-font-color);
+
+    font-weight: bold;
+
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 20px;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.sidebar-group {
+    padding: 0;
+    gap: 10px;
 }
 
 .sidebar-element {
     display: flex;
     align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
 }
 
 .sidebar-element > svg {
-    fill: white;
+    fill: var(--sidebar-font-color);
     height: 2ch;
 }
 
@@ -95,4 +112,27 @@ body {
 
 .main-content {
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "projects annoucements"
+    "projects trendings";
+}
+
+#project-container {
+    grid-area: projects;
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+#annoucement-container {
+    grid-area: annoucements;
+}
+
+#trending-container {
+    grid-area: trendings;
 }
