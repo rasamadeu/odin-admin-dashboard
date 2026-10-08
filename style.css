@@ -61,7 +61,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Custom properties */
 :root {
     --custom-blue: #1992d4;
-    --project-shadow-color: #f0b52c;
+    --project-highlight: #f0b52c;
+    --shadow-color: #c7c7c7;
+    --shadow-size: 3px;
     --project-font-color: #6C6C6C;
     --main-content-background: #e2e8f0;
     --sidebar-font-color: white;
@@ -128,6 +130,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 var(--shadow-size) var(--shadow-size) var(--shadow-color);
+    margin-bottom: var(--shadow-size);
 }
 
 .search {
@@ -148,6 +152,8 @@ body {
     border-radius: 30px;
     background-color: var(--main-content-background);
     width: 70ch;
+    height: 1.5lh;
+    padding: 2ch;
 }
 
 .notifications {
@@ -208,10 +214,8 @@ body {
     grid-template-areas:
     "projects annoucements"
     "projects trendings";
-}
-
-.main-content > div {
     padding: var(--project-gap);
+    gap: var(--project-gap);
 }
 
 #project-container {
@@ -235,7 +239,7 @@ body {
     left: 0;
     width: var(--border-radius);
     height: 100%;
-    background-color: var(--project-shadow-color);
+    background-color: var(--project-highlight);
     border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
 
@@ -243,6 +247,7 @@ body {
     background-color: white;
     border-radius: var(--border-radius);
     padding: var(--project-gap);
+    box-shadow: var(--shadow-size) var(--shadow-size) var(--shadow-size)var(--shadow-color);
 }
 
 .main-info p {
