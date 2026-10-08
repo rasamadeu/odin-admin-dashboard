@@ -65,6 +65,8 @@ h1, h2, h3, h4, h5, h6 {
     --project-font-color: #6C6C6C;
     --main-content-background: #e2e8f0;
     --sidebar-font-color: white;
+    --border-radius: 10px;
+    --project-gap: 2ch;
     font-size: 18px;
     font-family: "Roboto";
 }
@@ -130,11 +132,12 @@ body {
     "projects trendings";
 }
 
-#project-container {
-    --project-gap: 2ch;
-
-    grid-area: projects;
+.main-content > div {
     padding: var(--project-gap);
+}
+
+#project-container {
+    grid-area: projects;
 }
 
 .projects-wrapper {
@@ -144,12 +147,7 @@ body {
 }
 
 .project {
-    --border-radius: 10px;
-
     position: relative;
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: var(--project-gap);
 }
 
 .project::before {
@@ -163,8 +161,14 @@ body {
     border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
 
-.left-align-title > p {
-   color: var(--project-font-color);
+.main-info {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: var(--project-gap);
+}
+
+.main-info p {
+    color: var(--project-font-color);
 }
 
 .project-buttons {
@@ -185,6 +189,22 @@ body {
 
 #annoucement-container {
     grid-area: annoucements;
+}
+
+.annoucement-wrapper > div {
+    font-size: 0.8rem;
+    padding: 1lh 1ch;
+    border-bottom: 1px solid lightgrey;
+}
+
+.annoucement-wrapper > div {
+    font-size: 0.8rem;
+    padding: 1lh 1ch;
+    border-bottom: 1px solid lightgrey;
+}
+
+.annoucement-wrapper > div:last-child {
+    border: none;
 }
 
 #trending-container {
