@@ -222,7 +222,7 @@ body {
     font-weight: bold;
 }
 
-.trending-wrapper img {
+.icon {
     --icon-size: 60px;
 
     width: var(--icon-size);
