@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     --sidebar-font-color: white;
     --border-radius: 10px;
     --project-gap: 2ch;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Roboto";
 }
 
@@ -122,8 +122,12 @@ body {
 /* HEADER */
 
 .header {
+    --horizontal-gap: 50px;
     grid-area: header;
-    padding: var(--project-gap);
+    padding: var(--project-gap) var(--horizontal-gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .search {
@@ -136,12 +140,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--project-gap);
 }
 
 .search input {
     border: none;
     border-radius: 30px;
     background-color: var(--main-content-background);
+    width: 70ch;
 }
 
 .notifications {
@@ -149,6 +155,47 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: var(--project-gap);
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--project-gap);
+}
+
+.profile {
+    display: flex;
+    gap: var(--project-gap);
+}
+
+
+.profile .profile-picture {
+    --size: 70px;
+}
+
+.salutation p {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.publication-actions {
+    display: flex;
+    gap: var(--project-gap);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.publication-actions > button {
+    width: 120px;
+    height: 50px;
+
+    background-color: var(--custom-blue);
+    color: white;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 25px;
 }
 
 /* MAIN CONTENT */
