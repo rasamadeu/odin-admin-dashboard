@@ -82,6 +82,8 @@ body {
     "sidebar main-content";
 }
 
+/* SIDEBAR */
+
 .sidebar {
     background-color: var(--custom-blue); 
     color: var(--sidebar-font-color);
@@ -117,10 +119,39 @@ body {
     height: 2ch;
 }
 
+/* HEADER */
+
 .header {
     grid-area: header;
+    padding: var(--project-gap);
 }
 
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-content-background);
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--project-gap);
+}
+
+/* MAIN CONTENT */
 .main-content {
     background-color: var(--main-content-background);
     grid-area: main-content;
@@ -178,7 +209,7 @@ body {
     padding: var(--project-gap) var(--project-gap) 0;
 }
 
-.project-buttons > button {
+.button-icon {
     --side-size: 35px;
 
     background: none;
@@ -222,11 +253,11 @@ body {
     font-weight: bold;
 }
 
-.icon {
-    --icon-size: 60px;
+.profile-picture {
+    --size: 60px;
 
-    width: var(--icon-size);
-    height: var(--icon-size);
+    width: var(--size);
+    height: var(--size);
     border-radius: 50%;
     object-fit: cover;
 }
